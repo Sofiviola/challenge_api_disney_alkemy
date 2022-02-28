@@ -16,24 +16,23 @@ public class Genero {
     //Atributos
     @Id
     @GeneratedValue
-    private  long id;
+    private  Long id;
 
+    @Column
     private String imagen;
     private String nombre;
-    private PeliculaSerie peliculaSerie;
 
     @OneToMany //Relacion con peliculaSerie
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "genero_id")
     private List<PeliculaSerie> peliculaSeries;
 
     //Constructores
     public Genero() {
     }
 
-    public Genero(String imagen, String nombre, PeliculaSerie peliculaSerie, List<PeliculaSerie> peliculaSeries) {
+    public Genero(String imagen, String nombre,List<PeliculaSerie> peliculaSeries) {
         this.imagen = imagen;
         this.nombre = nombre;
-        this.peliculaSerie = peliculaSerie;
         this.peliculaSeries = peliculaSeries;
     }
 

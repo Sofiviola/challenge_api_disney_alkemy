@@ -4,10 +4,7 @@ package com.alkemy.alkemy.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -18,8 +15,9 @@ public class PeliculaSerie {
     //Atributos
     @Id
     @GeneratedValue
-    private  long id;
+    private  Long id;
 
+    @Column
     private String imagen;
     private String titulo;
     private Date fechaCreacion;

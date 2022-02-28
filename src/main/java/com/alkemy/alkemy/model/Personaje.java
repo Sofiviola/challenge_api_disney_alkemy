@@ -14,12 +14,13 @@ public class Personaje {
     //Atributos
     @Id
     @GeneratedValue
-    private  long id;
+    private  Long id;
 
+    @Column
     private String imagen;
     private String nombre;
     private int edad;
-    private double peso;
+    private Double peso;
     private String historia;
 
     @ManyToMany // Relacion muchos a muchos con PeliculaSerie
